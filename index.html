@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html ng-app="recursionDemo">
+  <head>
+      <title>My Accessories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="component.css">
+    
+  </head>
+
+  <body>
+
+    <header class="header fixed-header">
+        <div class="container-fluid display-flex v-center">
+            <button class="nav-toggle" data-nav="#navPanelLeft">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navPanelLeft" class="nav-panel tr3">
+                <div class="">
+                    <ul class="nav-menu">
+                        <li><a href="#">Accordion</a></li>
+                        <li><a href="#">Tabs</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="align-right">
+                <div class="search-field">
+                    <input type="text" class="form-control" placeholder="Search by keywords..."/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container-fluid">
+            
+            <div class="row mt-sm-3 mb-sm-3">
+                <div class="col-md-12 text-center pageTitle">
+                    <h3 class="text-normal ">Pure Javascript plugins for <span class="bold">Accordion</span>, <span class="bold">Input field word count</span></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h5>Individual accordion</h5>
+                    <ul class="accordList">
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn active" onclick="accordionInit()" data-accordion="accord-1">Title line first <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-1" class="accordion-pane active">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-2">Title line second <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-2" class="accordion-pane">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p> 
+                                <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-3">Title line second <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-3" class="accordion-pane">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p> 
+                                <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="gray-bg">
+                        <div class="block-header">
+                            <ul class="display-flex v-center noList">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">Src</a></li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-sm">
+    <pre>
+        <&zwj;ul class="accordList">
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn active" onclick="accordionInit()" data-accordion="accord-1">Title line first <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-1" class="accordion-pane active">1<&zwj;/div>
+            <&zwj;/li>
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-2">Title line second <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-2" class="accordion-pane">2<&zwj;/div>
+            <&zwj;/li>
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-3">Title line second <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-3" class="accordion-pane">3<&zwj;/div>
+            <&zwj;/li>
+        <&zwj;/ul>
+    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12"><hr></div>
+
+                <div class="col-md-5">
+                    <h5>Group accordion</h5>
+                    <ul class="accordList" data-accgroup="true">
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-g1">Title line first <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-g1" class="accordion-pane">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-g2">Title line second <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-g2" class="accordion-pane">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p> 
+                                <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-g3">Title line second <i class="align-right arrow-icon fa fa-angle-right"></i></button>
+                            <div id="accord-g3" class="accordion-pane">
+                                <h4>Lorem Ipsum has been the industry's</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p> 
+                                <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <div class="col-md-7">
+                    <div class="gray-bg">
+                        <div class="block-header">
+                            <ul class="display-flex v-center noList">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">Src</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="wrapper-sm">
+    <pre>
+        <&zwj;ul class="accordList" data-accgroup="true">
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn active" onclick="accordionInit()" data-accordion="accord-1">Title line first <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-1" class="accordion-pane active">1<&zwj;/div>
+            <&zwj;/li>
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-2">Title line second <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-2" class="accordion-pane">2<&zwj;/div>
+            <&zwj;/li>
+            <&zwj;li>
+                <&zwj;button class="btn btn-sm has-arrow accord-btn" onclick="accordionInit()" data-accordion="accord-3">Title line second <&zwj;i class="align-right"><&zwj;/i><&zwj;/button>
+                <&zwj;div id="accord-3" class="accordion-pane">3<&zwj;/div>
+            <&zwj;/li>
+        <&zwj;/ul>
+    </pre>
+                    </div></div>
+                </div>
+
+                <div class="col-sm-12"><hr></div>
+                <!-- <div class="col-md-5">
+                    <div class="">
+                        <textarea name="txtScript" maxlength="500" class="form-control checkWordCount" cols="1" rows="5"></textarea>
+                        <div>Total word count: <span class="display_count">0</span> words. Words left: <span class="word_left">5</span></div>
+                        <div>Characters = <span class="char">0</span></div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-fluid">
+
+        </div>
+    </footer>
+
+    <!-- pure JS -->
+    <script src="components.js"></script>
+
+  </body>
+</html>
