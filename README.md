@@ -1,2 +1,2 @@
 # PureJavaScriptWebComponents
-Pure JavaScript Web Components, easy to customized/use, no jQuery dependency.
+Pure JavaScript Web Components, easy to customize and use, no jQuery dependency.
