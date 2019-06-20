@@ -1,0 +1,243 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+html {
+    min-height: 100%;
+    overflow-x: hidden;    
+}
+body {
+    min-height: 100vh;
+    background: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+    color: #2c3e50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.tr3, .btn, a, button {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+a, button, .cursor-pointer {cursor: pointer;}
+.cursor-default {
+    cursor: default;
+}
+button:focus, button:active {
+    outline: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #00bdf2;
+  -webkit-text-fill-color: #495057;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.m-t-2 {margin-top: 2px;}
+.m-b-2 {margin-bottom: 2px;}
+.m-l-2 {margin-left: 2px;}
+.m-r-2 {margin-right: 2px;}
+.m-t-xs {margin-top: 5px;}
+.m-r-xs {margin-right: 5px;}
+.m-b-xs {margin-bottom: 5px;}
+.m-l-xs {margin-left: 5px;}
+.m-t-sm {margin-top: 10px;}
+.m-r-sm {margin-right: 10px;}
+.m-b-sm {margin-bottom: 10px;}
+.m-l-sm {margin-left: 10px;}
+.m-t-md {margin-top: 15px;}
+.m-r-md {margin-right: 15px;}
+.m-b-md {margin-bottom: 15px;}
+.m-l-md {margin-left: 15px;}
+.m-t {margin-top: 20px;}
+.m-r {margin-right: 20px;}
+.m-b {margin-bottom: 20px;}
+.m-l {margin-left: 20px;}
+.m-t-lg {margin-top: 25px;}
+.m-r-lg {margin-right: 25px;}
+.m-b-lg {margin-bottom: 25px;}
+.m-l-lg {margin-left: 25px;}
+.m-none {margin: 0 !important;}
+.m-t-none {margin-top: 0 !important;}
+.m-r-none {margin-right: 0 !important;}
+.m-b-none {margin-bottom: 0 !important;}
+.m-l-none {margin-left: 0 !important;}
+
+.b-all {border: 1px solid #ddd;}
+.b-t {border-top: 1px solid #ddd;}
+.b-r {border-right: 1px solid #ddd;}
+.b-b {border-bottom: 1px solid #ddd;}
+.b-l {border-left: 1px solid #ddd;}
+
+.wrapper-xs {padding: 5px;}
+.wrapper-sm {padding: 10px;}
+.wrapper {padding: 15px;}
+.wrapper-md {padding: 20px;}
+.wrapper-lg {padding: 25px;}
+.wrapper-xl {padding: 36px;}
+.wrapper-custom {
+    padding: 10px 15px;
+}
+.wrapper-custom-sm {
+    padding: 5px 15px;
+}
+.wrapper-custom-xs {
+    padding: 5px 10px;
+}
+.v-scroll {
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+}
+.scroll-shadow {
+    position: relative;
+}
+.scroll-shadow:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 35px;
+    pointer-events: none;
+    z-index: 2;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 64%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 64%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 64%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+.flow-hidden {
+    overflow: hidden;
+}
+.white-bg {
+    background: #fff;
+}
+.gray-bg {
+    background: #e6e6e6;
+}
+.wrapper-sm {
+    padding: 10px;
+}
+.block-header {    
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.block-header .titleText {
+    padding: 5px 10px;
+}
+.block-header ul li a {
+    padding: 5px 10px;
+    display: block;
+}
+.display-flex {
+    display: flex;
+}
+.v-center {
+    align-items: center;
+}
+.align-right {
+    margin-left: auto;
+}
+.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.noList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.bold {
+    font-weight: 700;
+}
+.semi-bold {
+    font-weight: 500;
+}
+.text-normal {
+    font-weight: 400;
+}
+.header {
+    background: #008b8b;
+    position: relative;
+}
+.fixed-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+.fixed-header + * {
+    margin-top: 48px;
+}
+.nav-toggle {
+    margin-right: 10px;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+}
+.nav-toggle span {
+    width: 24px;
+    background: #fff;
+    height: 2px;
+    display: block;
+}
+.nav-toggle span + span {
+    margin-top: 6px;
+}
+.header .form-control::placeholder {
+    color: #fff;
+}
+
+.header .form-control:-ms-input-placeholder {
+    color: #fff;
+}
+
+.header .form-control::-ms-input-placeholder {
+    color: #fff;
+}
+.header .form-control {
+    border: 0;
+    background: rgba(255,255,255,0.3);
+    color: #fff;
+}
+.header .form-control:focus {
+    border: 0;
+    background: rgba(255,255,255,0.5);
+    color: #fff;
+}
+.section {
+    padding: 15px 0;
+}
+.pageTitle {
+    margin-bottom: 15px;
+}
+.pageTitle h3 {
+    font-size: 24px;
+    color: #008b8b;
+    margin-bottom: 0;
+}
+
+@media(min-width: 992px) {
+    .header {
+        padding: 5px 0;
+    }
+    .pageTitle {
+        margin-bottom: 30px;
+    }
+    .pageTitle p {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,82 @@
+/*Accordion css*/
+.accordList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.accordList li + li {
+    margin-top: 15px;
+}
+.accordList li {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.accordList li .btn {
+    border-radius: 0;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+.accordion-pane {
+    height: 0;
+    overflow: hidden;
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.accordion-pane.active {
+    height: 100%;
+    overflow: visible;
+    -webkit-transform: translate(0, 0%);
+    -moz-transform: translate(0, 0%);
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+}
+.accordList .has-arrow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.accord-btn.active {
+    background: #aaa;
+    color: #fff;
+}
+.accord-btn .arrow-icon {
+    font-size: 22px;
+}
+.accord-btn.active > .arrow-icon  {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+/*End Accordion css*//*======================================================================*/
+
+/*nav panel css*/
+.nav-panel {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #fff;
+    width: 230px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+}
+.nav-panel.right {
+    left: auto; 
+    right: 0;
+}
+.active-nav-panel .nav-panel{
+    left: 0;
+}
+.active-nav-panel .nav-panel.right{
+    right: 0;
+}
+
+/*End nav panel css*//*======================================================================*/
